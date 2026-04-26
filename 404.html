@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>404 | Página no encontrada - L. R. Jeffers</title>
+  <meta name="description" content="Parece que te has perdido en la niebla. Página no encontrada en el sitio oficial de L. R. Jeffers.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="assets/images/icono.png">
+  <link rel="apple-touch-icon" href="assets/images/icono.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css" />
+  
+  <style>
+    /* Estilos específicos para la página 404 */
+    body.error-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #111;
+      color: #e0e0e0;
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .error-code {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 8rem;
+      color: #6b1c23; /* Rojo borgoña */
+      margin: 0;
+      line-height: 1;
+      text-shadow: 2px 2px 10px rgba(107, 28, 35, 0.5);
+    }
+    
+    .error-message {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.5rem;
+      color: #fff;
+      margin: 1rem 0 2rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    
+    .error-description {
+      font-size: 1.1rem;
+      color: #bbb;
+      max-width: 600px;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    
+    .error-footer {
+      margin-top: 4rem;
+      font-size: 0.8rem;
+      color: #666;
+    }
+    
+    .btn-home {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: #6b1c23;
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    
+    .btn-home:hover {
+      background: #8a2a2f;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(107, 28, 35, 0.4);
+    }
+  </style>
+</head>
+<body class="error-page">
+
+  <!-- BOTÓN DE SONIDO -->
+  <button id="sound-toggle" aria-label="Activar/desactivar sonidos" title="Activar/desactivar sonidos" style="position: fixed; top: 20px; right: 20px; background: transparent; border: 1px solid #444; color: #fff; padding: 0.5rem; border-radius: 4px; cursor: pointer; z-index: 1000;">
+    <span id="sound-icon">🔊</span>
+  </button>
+  
+  <!-- SONIDOS -->
+  <audio id="sound-hover" src="assets/sounds/hover.mp3" preload="auto"></audio>
+  <audio id="sound-click" src="assets/sounds/click.mp3" preload="auto"></audio>
+
+  <div class="error-content">
+    <!-- BREADCRUMBS -->
+<nav aria-label="Ruta de navegación" class="breadcrumbs">
+  <a href="index.html">Inicio</a> 
+  <span aria-hidden="true">/</span> 
+  <span aria-current="page">Error 404</span>
+</nav>
+<h1 class="error-code">404</h1>
+    <h2 class="error-message">Perdido en la niebla...</h2>
+    <p class="error-description">
+      Parece que este enlace se ha desvanecido en las sombras. <br>
+      No te preocupes, incluso los mejores cazadores se pierden a veces.
+    </p>
+    
+    <a href="index.html" class="btn-home" id="btn-home">← Volver al Inicio</a>
+  </div>
+
+  <div class="error-footer">
+    <p>&copy; 2026 L. R. Jeffers. Todos los derechos reservados.</p>
+    <p>Escrito con sangre, tinta y mucha masa madre.</p>
+  </div>
+
+  <!-- Script de Sonido -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const soundHover = document.getElementById('sound-hover');
+      const soundClick = document.getElementById('sound-click');
+      const soundToggle = document.getElementById('sound-toggle');
+      const soundIcon = document.getElementById('sound-icon');
+      const btnHome = document.getElementById('btn-home');
+      
+      let soundEnabled = true;
+      
+      // Toggle de sonido
+      soundToggle.addEventListener('click', () => {
+        soundEnabled = !soundEnabled;
+        soundIcon.textContent = soundEnabled ? '🔊' : '🔇';
+        soundToggle.setAttribute('aria-label', soundEnabled ? 'Desactivar sonidos' : 'Activar sonidos');
+      });
+      
+      // Sonidos en botón de regreso
+      if (btnHome) {
+        btnHome.addEventListener('mouseenter', () => {
+          if (soundEnabled && soundHover) {
+            soundHover.currentTime = 0;
+            soundHover.volume = 0.4;
+            soundHover.play().catch(() => {});
+          }
+        });
+        
+        btnHome.addEventListener('click', () => {
+          if (soundEnabled && soundClick) {
+            soundClick.currentTime = 0;
+            soundClick.volume = 0.6;
+            soundClick.play().catch(() => {});
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

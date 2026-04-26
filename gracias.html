@@ -3,11 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Gracias por suscribirte al Círculo Oscuro">
-  <title>¡Gracias! | LR Jeffers</title>
   
-  <!-- Favicon -->
+  <title>¡Bienvenido al Círculo Oscuro! | L. R. Jeffers</title>
+  <meta name="description" content="Gracias por suscribirte al Círculo Oscuro. Pronto recibirás noticias de L. R. Jeffers con avances, novedades y contenido exclusivo.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://lrjeffers.github.io/gracias.html">
+  
+  <!-- Favicon - Múltiples formatos -->
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" href="assets/images/icono.png">
+  <link rel="apple-touch-icon" href="assets/images/icono.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icono.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icono.png?v=2">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="¡Bienvenido al Círculo Oscuro! | L. R. Jeffers">
+  <meta property="og:description" content="Gracias por suscribirte. Pronto recibirás noticias con avances, novedades y contenido exclusivo.">
+  <meta property="og:image" content="https://lrjeffers.github.io/assets/images/banner.png">
+  <meta property="og:url" content="https://lrjeffers.github.io/gracias.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="¡Bienvenido al Círculo Oscuro! | L. R. Jeffers">
+  <meta name="twitter:description" content="Gracias por suscribirte. Pronto recibirás noticias con avances, novedades y contenido exclusivo.">
+  <meta name="twitter:image" content="https://lrjeffers.github.io/assets/images/banner.png">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,21 +38,323 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="styles.css" />
+  
+  <!-- ==================== SCHEMA.ORG - DATOS ESTRUCTURADOS ==================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "L. R. Jeffers",
+    "url": "https://lrjeffers.github.io/",
+    "image": "https://lrjeffers.github.io/assets/images/perfil_autor.jpg",
+    "description": "L. R. Jeffers (Caracas, 1990) es escritor queer autodidacta especializado en Romance Paranormal, novela erótica y literatura LGBT.",
+    "jobTitle": "Autor de Ficción",
+    "sameAs": [
+      "https://www.amazon.com/author/lrjeffers",
+      "https://www.goodreads.com/lrjeffers90",
+      "https://www.instagram.com/lrjeffers90",
+      "https://www.facebook.com/LRJeffers1",
+      "https://www.patreon.com/c/LRJeffers90",
+      "https://www.tiktok.com/@lrj_90t"
+    ]
+  }
+  </script>
+  
+  <style>
+    .gracias-container {
+      max-width: 600px;
+      margin: 4rem auto;
+      padding: 2rem;
+      text-align: center;
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(107, 28, 35, 0.3);
+    }
+    
+    .gracias-container h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.5rem;
+      color: #6b1c23;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    .gracias-container p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #e0e0e0;
+      margin-bottom: 2rem;
+    }
+    
+    .share-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #333;
+    }
+    
+    .share-section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.2rem;
+      color: #999;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+    
+    .share-buttons {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.25rem;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 6px;
+      color: #e0e0e0;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .share-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* WhatsApp - Verde */
+    .whatsapp-btn {
+      background: #25D366;
+      border-color: #25D366;
+      color: #fff;
+    }
+    .whatsapp-btn:hover {
+      background: #128C7E;
+      border-color: #128C7E;
+    }
+    
+    /* X/Twitter - Negro */
+    .twitter-btn {
+      background: #000000;
+      border-color: #000000;
+      color: #fff;
+    }
+    .twitter-btn:hover {
+      background: #1a1a1a;
+      border-color: #1a1a1a;
+    }
+    
+    /* Facebook - Azul */
+    .facebook-btn {
+      background: #1877F2;
+      border-color: #1877F2;
+      color: #fff;
+    }
+    .facebook-btn:hover {
+      background: #166fe5;
+      border-color: #166fe5;
+    }
+    
+    /* Instagram - Gradiente */
+    .instagram-btn {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      border: none;
+      color: #fff;
+    }
+    .instagram-btn:hover {
+      opacity: 0.9;
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+    
+    /* Copiar enlace - Borde punteado borgoña */
+    .copy-btn {
+      background: #1a1a1a;
+      border: 1px dashed #6b1c23;
+      color: #e0e0e0;
+    }
+    .copy-btn:hover {
+      background: #222;
+      border-color: #8a2a2f;
+    }
+    .copy-btn.copied {
+      background: #6b1c23;
+      border-color: #6b1c23;
+      border-style: solid;
+      color: #fff;
+    }
+    
+    .back-home {
+      margin-top: 2.5rem;
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: #6b1c23;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .back-home:hover {
+      background: #8a2a2f;
+      transform: translateY(-2px);
+    }
+    
+    @media (max-width: 480px) {
+      .gracias-container {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+      }
+      
+      .gracias-container h1 {
+        font-size: 2rem;
+      }
+      
+      .share-buttons {
+        flex-direction: column;
+      }
+      
+      .share-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <main id="main" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem;">
-    <div class="thank-you-container" style="text-align: center; max-width: 600px;">
-      <h1 style="font-size: 3rem; margin-bottom: 1rem;">¡Bienvenido al Círculo Oscuro! 🖤</h1>
-      <p style="font-size: 1.2rem; margin-bottom: 2rem; line-height: 1.6;">
-        Gracias por suscribirte. Pronto recibirás noticias mías con avances, novedades y contenido exclusivo.
+  
+  <!-- SONIDOS -->
+  <audio id="sound-hover" src="assets/sounds/hover.mp3" preload="auto"></audio>
+  <audio id="sound-click" src="assets/sounds/click.mp3" preload="auto"></audio>
+  <audio id="sound-page-load" src="assets/sounds/page-load.mp3" preload="auto"></audio>
+  
+  <div class="gracias-container">
+    <h1>¡Bienvenido al Círculo Oscuro! 🖤</h1>
+    
+    <p>
+      Gracias por suscribirte. Pronto recibirás noticias mías con avances, novedades y contenido exclusivo.
+    </p>
+    
+    <div class="share-section">
+      <h2>¿Te gusta lo que ves? ¡Corre la voz!</h2>
+      <p style="color: #999; margin-bottom: 1.5rem; font-size: 0.95rem;">
+        Comparte esta página y ayúdame a llegar a más lectores.
       </p>
-      <p style="margin-bottom: 2rem;">
-        Mientras tanto, puedes seguirme en mis redes sociales o explorar mis obras.
-      </p>
-      <a href="index.html" class="btn btn-primary" style="display: inline-block; margin-top: 1rem;">
-        Volver al Inicio
-      </a>
+      
+      <div class="share-buttons">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/?text=Descubre%20el%20mundo%20de%20L.%20R.%20Jeffers%3A%20Romance%20Paranormal%2C%20Dark%20Romance%20y%20Cambiaformas%20LGBT.%20%C2%A1Entra%20al%20C%C3%ADrculo%20Oscuro!%20%F0%9F%96%A4%20https://lrjeffers.github.io/" 
+           class="share-btn whatsapp-btn" 
+           target="_blank" 
+           rel="noopener noreferrer">
+          <span>📱</span>
+          <span>WhatsApp</span>
+        </a>
+        
+        <!-- X/Twitter -->
+        <a href="https://twitter.com/intent/tweet?url=https://lrjeffers.github.io/&text=Descubre%20el%20mundo%20de%20L.%20R.%20Jeffers%3A%20Romance%20Paranormal%2C%20Dark%20Romance%20y%20Cambiaformas%20LGBT.%20%C2%A1Entra%20al%20C%C3%ADrculo%20Oscuro!%20%F0%9F%96%A4" 
+           class="share-btn twitter-btn" 
+           target="_blank" 
+           rel="noopener noreferrer">
+          <span>🐦</span>
+          <span>X / Twitter</span>
+        </a>
+        
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://lrjeffers.github.io/" 
+           class="share-btn facebook-btn" 
+           target="_blank" 
+           rel="noopener noreferrer">
+          <span>📘</span>
+          <span>Facebook</span>
+        </a>
+        
+        <!-- Instagram -->
+        <button class="share-btn instagram-btn" onclick="window.open('https://www.instagram.com/', '_blank')" aria-label="Compartir en Instagram">
+          <span>📸</span>
+          <span>Instagram</span>
+        </button>
+        
+        <!-- Copiar enlace -->
+        <button class="share-btn copy-btn" id="copyLinkBtn" aria-label="Copiar enlace">
+          <span>📋</span>
+          <span id="copyText">Copiar enlace</span>
+        </button>
+      </div>
     </div>
-  </main>
+    
+    <a href="index.html" class="back-home">
+      ← Volver al Inicio
+    </a>
+  </div>
+
+  <!-- Script para copiar enlace y sonidos -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const soundHover = document.getElementById('sound-hover');
+      const soundClick = document.getElementById('sound-click');
+      const soundPageLoad = document.getElementById('sound-page-load');
+      
+      let soundEnabled = true;
+      
+      // Reproducir sonido de carga de página
+      if (soundPageLoad && soundEnabled) {
+        soundPageLoad.volume = 0.3;
+        soundPageLoad.play().catch(() => {});
+      }
+      
+      // Sonidos en botones de compartir
+      document.querySelectorAll('.share-btn').forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+          if (soundEnabled && soundHover) {
+            soundHover.currentTime = 0;
+            soundHover.volume = 0.4;
+            soundHover.play().catch(() => {});
+          }
+        });
+        
+        btn.addEventListener('click', () => {
+          if (soundEnabled && soundClick) {
+            soundClick.currentTime = 0;
+            soundClick.volume = 0.6;
+            soundClick.play().catch(() => {});
+          }
+        });
+      });
+      
+      // Función para copiar enlace
+      const copyBtn = document.getElementById('copyLinkBtn');
+      const copyText = document.getElementById('copyText');
+      
+      if (copyBtn) {
+        copyBtn.addEventListener('click', async () => {
+          const url = window.location.href;
+          
+          try {
+            await navigator.clipboard.writeText(url);
+            copyText.textContent = '¡Enlace copiado!';
+            copyBtn.classList.add('copied');
+            
+            setTimeout(() => {
+              copyText.textContent = 'Copiar enlace';
+              copyBtn.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            copyText.textContent = 'Error al copiar';
+            console.error('Error al copiar:', err);
+          }
+        });
+      }
+    });
+  </script>
+  
 </body>
 </html>
