@@ -55,7 +55,8 @@
       "https://www.instagram.com/lrjeffers90",
       "https://www.facebook.com/LRJeffers1",
       "https://www.patreon.com/c/LRJeffers90",
-      "https://www.tiktok.com/@lrj_90t"
+      "https://www.tiktok.com/@lrj_90t",
+      "https://whatsapp.com/channel/0029Vb7kOJt9Bb5wiQfIgn0q"
     ]
   }
   </script>
@@ -189,6 +190,35 @@
       transform: translateY(-2px);
     }
 
+    /* === Enlace al Kit de Prensa al final de la bio === */
+    .press-cta {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px dashed #444;
+      text-align: center;
+    }
+    .press-cta p {
+      margin: 0 0 0.6rem;
+      color: #aaa;
+      font-size: 0.95rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .press-cta a {
+      color: #e0e0e0;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 0.5px;
+    }
+    .press-cta a:hover,
+    .press-cta a:focus {
+      color: #fff;
+      border-bottom-color: #ff0000;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    }
+
     @media (max-width: 600px) {
       .tagline-principal {
         font-size: 1.5rem;
@@ -234,7 +264,6 @@
       <li><a href="index.html#obras">Obras</a></li>
       <li><a href="index.html#blog">Blog</a></li>
       <li><a href="index.html#contacto">Contacto</a></li>
-<li><a href="prensa.html">Kit de Prensa</a>
     </ul>
   </nav>
 
@@ -286,6 +315,12 @@
           </ul>
         </div>
 
+        <!-- === Enlace visible al Kit de Prensa (Opción B) === -->
+        <div class="press-cta">
+          <p>¿Eres blogger, podcaster o medio de comunicación?</p>
+          <a href="prensa.html">Accede a mi Kit de Prensa →</a>
+        </div>
+
         <h3 style="text-align: center; margin-top: 3rem;">Sígueme en redes:</h3>
         
         <!-- BOTONES CON ICONOS SVG -->
@@ -333,10 +368,13 @@
     </section>
   </main>
 
-  <!-- PIE DE PÁGINA -->
+  <!-- PIE DE PÁGINA (versión simple) -->
   <footer class="site-footer">
     <div class="footer-content">
-      <p>&copy; 2026 L. R. Jeffers. Todos los derechos reservados.</p>
+      <p>&copy; 2026 L. R. Jeffers. Todos los derechos reservados. | 
+         <a href="privacidad.html">Política de Privacidad</a> | 
+         <a href="prensa.html">Kit de Prensa</a>
+      </p>
       <p class="footer-tagline">Escrito con sangre, tinta y mucha masa madre.</p>
     </div>
   </footer>
