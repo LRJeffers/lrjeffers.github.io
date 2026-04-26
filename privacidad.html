@@ -61,6 +61,35 @@
     .legal-container a:hover {
       text-decoration: underline;
     }
+    .legal-container ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .legal-container li {
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Botón de contacto protegido */
+    .btn-contact-secure {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background: #6b1c23;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin: 0.5rem 0;
+    }
+    
+    .btn-contact-secure:hover {
+      background: #8a2a2f;
+      transform: translateY(-2px);
+    }
+    
     .back-link {
       display: inline-block;
       margin-top: 3rem;
@@ -125,7 +154,13 @@
       <li>Oponerte o limitar su tratamiento.</li>
       <li>Retirar tu consentimiento.</li>
     </ul>
-    <p>Para ejercer estos derechos, escríbeme a: <a href="mailto:lds.serie@gmail.com">lds.serie@gmail.com</a></p>
+    
+    <!-- CORREO PROTEGIDO: botón que genera el email con JavaScript -->
+    <p>Para ejercer estos derechos, escríbeme directamente:</p>
+    <button id="contact-email" class="btn-contact-secure">📩 Contactar por correo</button>
+    <p style="font-size: 0.85rem; color: #777; margin-top: 0.5rem;">
+      <em>Tu correo se abrirá automáticamente. No compartimos tu información con terceros.</em>
+    </p>
     
     <h2>8. Seguridad</h2>
     <p>Este sitio web utiliza conexión segura (HTTPS). Sin embargo, recuerda que ninguna transmisión de datos por internet es 100% segura. Te recomendamos no compartir información sensible a través de formularios web.</p>
@@ -135,5 +170,21 @@
     
     <a href="index.html" class="back-link">← Volver al inicio</a>
   </main>
+
+  <!-- SCRIPT DE PROTECCIÓN DE CORREO -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactBtn = document.getElementById('contact-email');
+      if (contactBtn) {
+        contactBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          // Construye el correo separando usuario y dominio para evitar bots
+          const user = 'lds.serie';
+          const domain = 'gmail.com';
+          window.location.href = 'mailto:' + user + '@' + domain;
+        });
+      }
+    });
+  </script>
 </body>
 </html>

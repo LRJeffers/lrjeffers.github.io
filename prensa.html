@@ -220,6 +220,8 @@
       font-size: 1.1rem;
       letter-spacing: 1px;
       transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
     }
     
     .btn-contact:hover {
@@ -328,7 +330,6 @@
             <span class="download-icon">📷</span>
             <h4>Foto de Autor</h4>
             <p>Retrato profesional en alta resolución (JPG/PNG)</p>
-            <!-- CAMBIAR: ruta real de tu foto -->
             <a href="assets/press/foto-autor-hd.jpg" download class="btn-download">Descargar</a>
           </div>
           
@@ -336,7 +337,6 @@
             <span class="download-icon">📚</span>
             <h4>Portadas de Libros</h4>
             <p>Pack completo de portadas y banners (ZIP)</p>
-            <!-- CAMBIAR: ruta real del ZIP -->
             <a href="assets/press/portadas-lrjeffers.zip" download class="btn-download">Descargar</a>
           </div>
           
@@ -344,7 +344,6 @@
             <span class="download-icon">🎨</span>
             <h4>Logotipo / Sello</h4>
             <p>Logo en PNG transparente y SVG vectorial</p>
-            <!-- CAMBIAR: ruta real del logo -->
             <a href="assets/press/logo-lrjeffers.png" download class="btn-download">Descargar</a>
           </div>
           
@@ -368,7 +367,7 @@
         </div>
       </section>
 
-      <!-- CONTACTO PARA PRENSA -->
+      <!-- CONTACTO PARA PRENSA (CORREO PROTEGIDO) -->
       <section class="press-section">
         <h2>Contacto para Prensa</h2>
         <div class="contact-box">
@@ -376,8 +375,10 @@
             ¿Interesado en una entrevista, colaboración, reseña avanzada o invitación a podcast?<br>
             Escríbeme directamente y coordinaremos los detalles.
           </p>
-          <!-- CAMBIAR: tu correo real de prensa -->
-          <a href="mailto:lds.serie@gmail.com" class="btn-contact">📩 lds.serie@gmail.com</a>
+          
+          <!-- Botón seguro: el correo se genera con JavaScript para evitar spam -->
+          <button id="contact-email" class="btn-contact">📩 Contactar por correo</button>
+          
           <p style="margin-top: 1rem; font-size: 0.85rem; color: #777;">
             Tiempo de respuesta habitual: 24-48 horas hábiles.
           </p>
@@ -408,7 +409,7 @@
     </div>
   </footer>
 
-  <!-- SCRIPT DE SONIDOS -->
+  <!-- SCRIPT DE SONIDOS + PROTECCIÓN DE CORREO -->
   <script src="script.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -447,6 +448,18 @@
           }
         });
       });
+
+      // 🔒 PROTECCIÓN DE CORREO: se genera dinámicamente al hacer clic
+      const contactBtn = document.getElementById('contact-email');
+      if (contactBtn) {
+        contactBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          // Construye el correo separando usuario y dominio para evitar bots
+          const user = 'lds.serie';
+          const domain = 'gmail.com';
+          window.location.href = 'mailto:' + user + '@' + domain;
+        });
+      }
     });
   </script>
 </body>
