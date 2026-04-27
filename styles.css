@@ -927,4 +927,95 @@ input:focus {
 
 .skip-link:focus {
   top: 0;
+/* ==================== CONTENEDORES CON SCROLL INTERNO ==================== */
+/* Para móvil: cajas con scroll en lugar de todo el texto visible */
+
+@media (max-width: 768px) {
+  /* Sinopsis con scroll */
+  .synopsis {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #6b1c23 #1a1a1a;
+  }
+  
+  /* Extracto con scroll */
+  .excerpt-box {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #6b1c23 #1a1a1a;
+  }
+  
+  /* Fichas de personajes con scroll */
+  .character-bio {
+    max-height: 350px;
+    overflow-y: auto;
+    padding-right: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #6b1c23 #1a1a1a;
+  }
+  
+  /* Estilo del scrollbar para Webkit (Chrome, Safari) */
+  .synopsis::-webkit-scrollbar,
+  .excerpt-box::-webkit-scrollbar,
+  .character-bio::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .synopsis::-webkit-scrollbar-track,
+  .excerpt-box::-webkit-scrollbar-track,
+  .character-bio::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 3px;
+  }
+  
+  .synopsis::-webkit-scrollbar-thumb,
+  .excerpt-box::-webkit-scrollbar-thumb,
+  .character-bio::-webkit-scrollbar-thumb {
+    background: #6b1c23;
+    border-radius: 3px;
+  }
+  
+  .synopsis::-webkit-scrollbar-thumb:hover,
+  .excerpt-box::-webkit-scrollbar-thumb:hover,
+  .character-bio::-webkit-scrollbar-thumb:hover {
+    background: #8a2a2f;
+  }
 }
+
+/* ==================== MEJORAS DE LEGIBILIDAD EN MÓVIL ==================== */
+@media (max-width: 768px) {
+  /* Aumentar interlineado */
+  .book-page p,
+  .synopsis p,
+  .excerpt-box p,
+  .character-bio p {
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+  }
+  
+  /* Aumentar tamaño de fuente en móvil */
+  .book-page,
+  .synopsis,
+  .excerpt-box,
+  .character-bio {
+    font-size: 1.05rem;
+  }
+  
+  /* Mejorar espaciado entre párrafos */
+  .excerpt-box p + p {
+    margin-top: 1.2rem;
+  }
+  
+  /* Sangría en extractos */
+  .excerpt-box p {
+    text-indent: 1.5rem;
+  }
+  
+  .excerpt-box p:first-of-type {
+    text-indent: 0;
+  }
+}}
