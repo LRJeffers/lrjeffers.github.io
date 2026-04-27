@@ -1040,26 +1040,3 @@ input:focus {
     padding: 1.2rem;
   }
 }
-/* ==================== ACORDEÓN "LEER MÁS" ==================== */
-document.addEventListener('DOMContentLoaded', () => {
-  const buttons = document.querySelectorAll('.btn-expand');
-  
-  buttons.forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      
-      const container = this.closest('.synopsis, .excerpt-box, .character-bio');
-      
-      if (container) {
-        container.classList.toggle('expanded');
-        
-        if (container.classList.contains('expanded')) {
-          this.textContent = 'Leer menos ▲';
-        } else {
-          this.textContent = 'Leer más ▼';
-        }
-      }
-    });
-  });
-});
