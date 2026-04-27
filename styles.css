@@ -1,4 +1,4 @@
-/* Paleta oscura - estilo "Círculo Oscuro" */
+/* ==================== VARIABLES Y RESET ==================== */
 :root {
   --fondo: #0a0a0a;
   --texto: #e0e0e0;
@@ -9,7 +9,7 @@
   --banner-overlay: rgba(0, 0, 0, 0.4);
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -26,7 +26,7 @@ body {
   min-height: 100vh;
 }
 
-/* Tipografía actualizada */
+/* ==================== TIPOGRAFÍA ==================== */
 h1, h2 {
   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 3px;
@@ -46,16 +46,16 @@ a, button, input, label, .btn {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* BANNER HERO - RESPONSIVE */
+/* ==================== BANNER HERO ==================== */
 .hero-banner {
   position: relative;
   width: 100%;
   height: 600px;
   background-image: url('assets/images/banner.png');
-  background-size: contain; /* CAMBIO: se ve completo sin cortar */
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #0a0a0a; /* Fondo negro por si queda espacio */
+  background-color: #0a0a0a;
 }
 
 .hero-overlay {
@@ -67,7 +67,7 @@ a, button, input, label, .btn {
   background: var(--banner-overlay);
 }
 
-/* NAVEGACIÓN */
+/* ==================== NAVEGACIÓN ==================== */
 .main-nav {
   background: #111;
   padding: 1rem;
@@ -116,7 +116,7 @@ a, button, input, label, .btn {
   border-bottom: 2px solid var(--acento);
 }
 
-/* Secciones */
+/* ==================== ESTRUCTURA GENERAL ==================== */
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -130,12 +130,11 @@ section {
   border-bottom: 1px solid var(--borde);
 }
 
-/* SECCIÓN DESTACADA (Último estreno) */
+/* ==================== SECCIÓN DESTACADA ==================== */
 .featured-section {
   background: transparent;
 }
 
-/* Layout del featured: texto izquierda, banner derecha */
 .featured-book-layout {
   display: flex;
   align-items: flex-start;
@@ -165,7 +164,6 @@ section {
   line-height: 1.7;
 }
 
-/* Banner de bilogía escalado */
 .featured-banner-container {
   flex-shrink: 0;
   width: 400px;
@@ -240,11 +238,7 @@ section {
   color: white;
 }
 
-/* Perfil de autor - VERSIÓN COMPLETA (sobre-mi.html) */
-.about-section-full {
-  background: transparent;
-}
-
+/* ==================== PERFIL DE AUTOR ==================== */
 .author-profile-large {
   display: flex;
   gap: 3rem;
@@ -287,7 +281,7 @@ section {
   margin-bottom: 1rem;
 }
 
-/* Grid de obras */
+/* ==================== GRID DE OBRAS ==================== */
 .obras-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -295,7 +289,6 @@ section {
   margin-top: 3rem;
 }
 
-/* Tarjetas de obras */
 .obra-card {
   background: #111;
   border-radius: 8px;
@@ -311,7 +304,6 @@ section {
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* MARCO ROJO ESTILO PASSEPARTOUT */
 .cover-frame {
   background-color: var(--rojo-brillante);
   padding: 12px;
@@ -360,7 +352,6 @@ section {
   line-height: 1.6;
 }
 
-/* Pregunta destacada */
 .question-highlight {
   font-style: italic;
   color: var(--acento-hover);
@@ -369,7 +360,6 @@ section {
   margin: 1.5rem 0;
 }
 
-/* Lista de libros en series */
 .serie-libros {
   background: #1a1a1a;
   padding: 1rem;
@@ -402,7 +392,7 @@ section {
   color: var(--acento);
 }
 
-/* Formularios */
+/* ==================== FORMULARIOS ==================== */
 form {
   display: flex;
   flex-direction: column;
@@ -431,7 +421,6 @@ input:focus {
   margin-top: 0.5rem;
 }
 
-/* Resultados de búsqueda */
 #search-results {
   margin-top: 1rem;
   padding: 1rem;
@@ -445,7 +434,7 @@ input:focus {
   margin-bottom: 1rem;
 }
 
-/* PIE DE PÁGINA CON IMAGEN */
+/* ==================== PIE DE PÁGINA ==================== */
 .site-footer {
   position: relative;
   background-image: url('assets/images/pie_de_pagina.png');
@@ -484,7 +473,6 @@ input:focus {
   font-size: 0.9rem;
 }
 
-/* Enlaces de redes sociales */
 .social-links {
   display: flex;
   justify-content: center;
@@ -515,128 +503,7 @@ input:focus {
   transform: translateY(-2px);
 }
 
-/* MENÚ MÓVIL */
-@media (max-width: 768px) {
-  #menu-toggle {
-    display: block;
-  }
-  
-  .main-nav ul {
-    display: none;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--borde);
-  }
-  
-  .main-nav ul.active {
-    display: flex;
-  }
-  
-  .main-nav li {
-    width: 100%;
-    text-align: center;
-  }
-  
-  .main-nav a {
-    display: block;
-    padding: 0.8rem;
-  }
-  
-  /* Banner móvil - AHORA SE VE COMPLETO */
-  .hero-banner {
-    height: auto;
-    min-height: 300px;
-    max-height: 500px;
-    background-size: contain;
-    padding: 2rem 0;
-  }
-  
-  /* Featured layout móvil */
-  .featured-book-layout {
-    flex-direction: column;
-  }
-  
-  .featured-banner-container {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  .book-info {
-    max-width: 100%;
-    text-align: center;
-  }
-  
-  .book-actions {
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .btn {
-    width: 100%;
-  }
-  
-  /* Autor móvil */
-  .author-profile-large {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-  
-  .author-photo-large {
-    width: 200px;
-    height: 200px;
-  }
-  
-  .author-bio-large h2 {
-    font-size: 2.5rem;
-    margin-top: 1rem;
-  }
-  
-  /* Obras grid móvil */
-  .obras-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .cover-frame {
-    padding: 8px;
-  }
-  
-  .social-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-  }
-  
-  .social-links a {
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  main {
-    padding: 0 1rem;
-  }
-}
-
-/* Accesibilidad: salto de contenido */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: var(--acento);
-  color: white;
-  padding: 0.5rem;
-  z-index: 100;
-  text-decoration: none;
-}
-
-.skip-link:focus {
-  top: 0;
-}/* ==================== BOTÓN DE SONIDO ==================== */
+/* ==================== BOTÓN DE SONIDO ==================== */
 #sound-toggle {
   position: fixed;
   bottom: 20px;
@@ -667,16 +534,7 @@ input:focus {
   outline-offset: 3px;
 }
 
-/* En móvil, mover el botón para que no tape el menú */
-@media (max-width: 768px) {
-  #sound-toggle {
-    bottom: 10px;
-    right: 10px;
-    width: 45px;
-    height: 45px;
-    font-size: 1.3rem;
-  }
-}/* ==================== FORMULARIO DE CONTACTO ==================== */
+/* ==================== FORMULARIO DE CONTACTO ==================== */
 .contact-intro {
   text-align: center;
   max-width: 700px;
@@ -774,16 +632,6 @@ input:focus {
   margin-top: 1.5rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .contact-form-wrapper {
-    padding: 2rem 1.5rem;
-  }
-  
-  .contact-intro {
-    font-size: 1rem;
-  }
-}
 /* ==================== PÁGINA DE GRACIAS ==================== */
 .thank-you-page {
   min-height: 100vh;
@@ -852,27 +700,23 @@ input:focus {
   background: #25D366;
   color: white;
 }
-.btn-share.whatsapp:hover { background: #128C7E; transform: translateY(-2px); }
 
+.btn-share.whatsapp:hover { background: #128C7E; transform: translateY(-2px); }
 .btn-share.twitter {
   background: #000000;
   color: white;
   border: 1px solid #333;
 }
-.btn-share.twitter:hover { background: #333; transform: translateY(-2px); }
 
+.btn-share.twitter:hover { background: #333; transform: translateY(-2px); }
 .btn-share.facebook {
   background: #1877F2;
   color: white;
 }
+
 .btn-share.facebook:hover { background: #0D65D9; transform: translateY(-2px); }
 
-@media (max-width: 768px) {
-  .thank-you-container { padding: 2rem 1.5rem; }
-  .share-buttons { flex-direction: column; }
-  .btn-share { width: 100%; }
-}
-/* BREADCRUMBS para libros */
+/* ==================== BREADCRUMBS ==================== */
 .breadcrumbs-book {
   margin-bottom: 1rem;
   font-size: 0.85rem;
@@ -881,162 +725,206 @@ input:focus {
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #333;
 }
+
 .breadcrumbs-book a {
   color: #8a2a2f;
   text-decoration: none;
   transition: all 0.3s ease;
 }
+
 .breadcrumbs-book a:hover {
   color: #fff;
   text-decoration: underline;
 }
+
 .breadcrumbs-book span {
   margin: 0 0.4rem;
   color: #555;
 }
-@media (max-width: 768px) {
-  .breadcrumbs-book {
-    font-size: 0.8rem;
-  }
-}
-/* ==================== RESPONSIVE MEJORADO + ACORDEÓN "LEER MÁS" ==================== */
 
-/* Ajustes generales para móvil */
+/* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--borde);
+  }
+  .main-nav ul.active {
+    display: flex;
+  }
+  .main-nav li {
+    width: 100%;
+    text-align: center;
+  }
+  .main-nav a {
+    display: block;
+    padding: 0.8rem;
+  }
+
+  .hero-banner {
+    height: auto;
+    min-height: 300px;
+    max-height: 500px;
+    background-size: contain;
+    padding: 2rem 0;
+  }
+
+  .featured-book-layout {
+    flex-direction: column;
+  }
+
+  .featured-banner-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .book-info {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .book-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .author-profile-large {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .author-photo-large {
+    width: 200px;
+    height: 200px;
+  }
+
+  .author-bio-large h2 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+
+  .obras-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .cover-frame {
+    padding: 8px;
+  }
+
+  .social-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .social-links a {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  main {
+    padding: 0 1rem;
+  }
+
   .book-page, .press-container, .legal-container, .about-container {
     padding: 1.5rem 1rem;
   }
-  
+
   .book-hero {
     gap: 1.5rem;
     padding-bottom: 1.5rem;
   }
-  
+
   .book-cover img {
     max-width: 220px;
   }
-  
+
   .book-info h1 {
     font-size: 1.6rem;
   }
-  
+
   .book-tagline {
     font-size: 1rem;
   }
-  
+
   .section-title {
     font-size: 1.3rem;
     margin: 2rem 0 1rem;
   }
-  
+
   .excerpt-box, .bonus-section, .bio-box, .character-bio {
     padding: 1.2rem;
   }
-  
+
   .character-grid {
     grid-template-columns: 1fr;
     gap: 0.8rem;
   }
-  
+
   .character-img {
     width: 120px;
     height: 120px;
   }
-}
-
-/* ==================== ACORDEÓN "LEER MÁS" (solo móvil) ==================== */
-@media (max-width: 768px) {
-  /* Contenedores con límite de altura */
-  .synopsis.collapsible,
-  .excerpt-box.collapsible,
-  .character-bio.collapsible {
-    max-height: 220px; /* Altura visible inicial */
-    overflow: hidden;
-    position: relative;
-    transition: max-height 0.4s ease;
+  
+  .breadcrumbs-book {
+    font-size: 0.8rem;
   }
   
-  /* Estado expandido */
-  .synopsis.collapsible.expanded,
-  .excerpt-box.collapsible.expanded,
-  .character-bio.collapsible.expanded {
-    max-height: 2000px; /* Suficiente para cualquier texto */
-  }
-  
-  /* Botón "Leer más" */
-  .btn-expand {
-    display: block;
-    width: 100%;
-    padding: 0.7rem 1rem;
-    background: linear-gradient(to bottom, transparent, #111);
-    color: #8a2a2f;
-    border: none;
-    border-top: 1px dashed #444;
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.3s ease;
-    margin-top: 0.5rem;
-  }
-  
-  .btn-expand:hover {
-    color: #ff3b3b;
-    background: linear-gradient(to bottom, transparent, #1a0505);
-  }
-  
-  /* Flecha animada */
-  .btn-expand::after {
-    content: " ▼";
-    display: inline-block;
-    transition: transform 0.3s ease;
-  }
-  
-  .btn-expand.expanded::after {
-    transform: rotate(180deg);
-    content: " ▲";
-  }
-  
-  /* Ocultar botón en desktop */
-  .btn-expand {
-    display: none;
-  }
-}
-
-/* Mostrar botón solo en móvil */
-@media (max-width: 768px) {
-  .btn-expand {
-    display: block;
-  }
-}
-/* ==================== RESPONSIVE MEJORADO + ACORDEÓN "LEER MÁS" ==================== */
-
-/* Ajustes generales para pantallas medianas y móviles */
-@media (max-width: 1024px) {
-  .book-page, .press-container, .legal-container, .about-container {
-    padding: 1.5rem 1rem;
-  }
-  
-  .book-hero {
-    gap: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-  
-  .book-cover img {
-    max-width: 220px;
-  }
-  
-  .book-info h1 {
-    font-size: 1.6rem;
-  }
-  
-  .section-title {
+  #sound-toggle {
+    bottom: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
     font-size: 1.3rem;
-    margin: 2rem 0 1rem;
+  }
+
+  .contact-form-wrapper {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-intro {
+    font-size: 1rem;
   }
   
-  .excerpt-box, .bonus-section, .bio-box, .character-bio {
-    padding: 1.2rem;
+  .thank-you-container {
+    padding: 2rem 1.5rem;
   }
+  
+  .share-buttons {
+    flex-direction: column;
+  }
+  
+  .btn-share {
+    width: 100%;
+  }
+}
+
+/* ==================== ACCESIBILIDAD ==================== */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--acento);
+  color: white;
+  padding: 0.5rem;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
 }
