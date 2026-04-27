@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const soundPageLoad = document.getElementById('sound-page-load');
   const soundToggle = document.getElementById('sound-toggle');
   const soundIcon = document.getElementById('sound-icon');
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuList = document.querySelector('.main-nav ul');
   
   let soundEnabled = true;
   
@@ -20,6 +22,34 @@ document.addEventListener('DOMContentLoaded', () => {
     soundIcon.textContent = soundEnabled ? '🔊' : '🔇';
     soundToggle.setAttribute('aria-label', soundEnabled ? 'Desactivar sonidos' : 'Activar sonidos');
   });
+  
+  // Toggle de menú móvil
+  if (menuToggle && menuList) {
+    menuToggle.addEventListener('click', () => {
+      menuList.classList.toggle('active');
+      
+      // Cambiar icono del menú
+      const isActive = menuList.classList.contains('active');
+      menuToggle.textContent = isActive ? '✕ Cerrar' : '☰ Menú';
+      menuToggle.setAttribute('aria-expanded', isActive);
+      
+      // Sonido al abrir/cerrar menú
+      if (soundEnabled && soundClick) {
+        soundClick.currentTime = 0;
+        soundClick.volume = 0.6;
+        soundClick.play().catch(() => {});
+      }
+    });
+    
+    // Cerrar menú al hacer clic en un enlace
+    menuList.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuList.classList.remove('active');
+        menuToggle.textContent = '☰ Menú';
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
   
   // Sonidos en enlaces y botones
   document.querySelectorAll('a, button').forEach(el => {
