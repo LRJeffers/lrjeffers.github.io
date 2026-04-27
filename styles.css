@@ -927,6 +927,8 @@ input:focus {
 
 .skip-link:focus {
   top: 0;
+}
+
 /* ==================== CONTENEDORES CON SCROLL INTERNO ==================== */
 /* Para móvil: cajas con scroll en lugar de todo el texto visible */
 
@@ -1018,4 +1020,4 @@ input:focus {
   .excerpt-box p:first-of-type {
     text-indent: 0;
   }
-}}
+}
