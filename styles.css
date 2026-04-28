@@ -1494,3 +1494,7 @@ input:focus {
     width: 100%;
   }
 }
+/* ==================== ELIMINAR BOTÓN DE SONIDO ==================== */
+#sound-toggle {
+  display: none !important;
+}
