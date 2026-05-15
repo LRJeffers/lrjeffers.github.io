@@ -27,16 +27,6 @@
 <body>
   <a href="#main" class="skip-link">Saltar al contenido</a>
   
-  <!-- BOTÓN DE SONIDO -->
-  <button id="sound-toggle" aria-label="Activar/desactivar sonidos" title="Activar/desactivar sonidos">
-    <span id="sound-icon">🔊</span>
-  </button>
-  
-  <!-- SONIDOS -->
-  <audio id="sound-hover" src="assets/sounds/hover.mp3" preload="auto"></audio>
-  <audio id="sound-click" src="assets/sounds/click.mp3" preload="auto"></audio>
-  <audio id="sound-page-load" src="assets/sounds/page-load.mp3" preload="auto"></audio>
-  
   <!-- NAVEGACIÓN -->
   <nav aria-label="Navegación principal" class="main-nav">
     <button id="menu-toggle" aria-expanded="false" aria-controls="menu-list">☰ Menú</button>
@@ -57,7 +47,27 @@
       
       <div class="posts-list">
         
-        <!-- PRIMER POST -->
+        <!-- PRIMER POST: MISA DE CENIZA (LIBRO 2) -->
+        <article class="post-preview">
+          <header class="post-header">
+            <h3>Misa de ceniza ya está disponible | Crónicas de Raven's Ridge #2</h3>
+            <div class="post-meta">
+              <time class="post-date" datetime="2026-05-15">15 de mayo, 2026</time>
+              <span class="post-category">Novedades / Lanzamientos</span>
+            </div>
+          </header>
+          
+          <p class="post-excerpt">
+            La bilogía está completa. Hoy, Misa de ceniza (Libro 2 de Crónicas de Raven's Ridge) está oficialmente disponible en Amazon. 
+            Killian y Drake enfrentan al verdadero monstruo de Raven's Ridge en esta conclusión intensa y emocional…
+          </p>
+          
+          <a href="blog/misa-de-ceniza-ya-disponible.html" class="read-more">
+            Leer artículo completo →
+          </a>
+        </article>
+        
+        <!-- SEGUNDO POST: LA SOMBRA DEL CUERVO (LIBRO 1) -->
         <article class="post-preview">
           <header class="post-header">
             <h3>La Sombra del Cuervo ya está disponible | Crónicas de Raven's Ridge #1</h3>
@@ -87,7 +97,7 @@
     </section>
   </main>
 
-   <!-- PIE DE PÁGINA -->
+  <!-- PIE DE PÁGINA -->
   <footer class="site-footer">
     <div class="footer-content">
       <div class="social-links">
@@ -113,19 +123,10 @@
           <i class="fab fa-goodreads-g"></i> Goodreads
         </a>
       </div>
-     <p>&copy; 2026 L. R. Jeffers. Todos los derechos reservados. | <a href="privacidad.html" style="color: #6b1c23; text-decoration: none;">Política de Privacidad</a></p>
-    <p class="footer-tagline">Escrito con sangre, tinta y mucha masa madre.</p>
-  </div>
-</footer>
-
-<script>
-  // Cargar footer dinámicamente
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-content').innerHTML = data;
-    });
-</script>
+      <p>&copy; 2026 L. R. Jeffers. Todos los derechos reservados. | <a href="privacidad.html" style="color: #6b1c23; text-decoration: none;">Política de Privacidad</a></p>
+      <p class="footer-tagline">Escrito con sangre, tinta y mucha masa madre.</p>
+    </div>
+  </footer>
 
   <!-- SCRIPT -->
   <script src="script.js"></script>
