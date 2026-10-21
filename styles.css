@@ -1718,3 +1718,48 @@ input:focus {
 .obra-card.filter-hidden {
   display: none !important;
 }
+
+/* ==================== SELECTOR DE IDIOMA EN NAVEGACIÓN ==================== */
+.lang-selector-nav {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 4px;
+  margin-left: 0.5rem;
+}
+
+.lang-nav-btn {
+  background: transparent;
+  color: #a0a0a0;
+  border: 1px solid #444444;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.lang-nav-btn:hover, .lang-nav-btn.active {
+  background: var(--acento);
+  color: #ffffff;
+  border-color: var(--acento);
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(107, 28, 35, 0.5);
+}
+
+@media (max-width: 768px) {
+  .lang-selector-nav {
+    display: flex !important;
+    justify-content: center;
+    margin: 1rem 0 0.5rem;
+    gap: 10px;
+    padding-top: 0.8rem;
+    border-top: 1px solid #222;
+  }
+  .lang-nav-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+}

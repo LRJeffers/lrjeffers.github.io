@@ -161,3 +161,242 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+/* ==================== SISTEMA MULTILINGÜE COMPLETO (I18N) ==================== */
+const I18N_WEB = {
+  es: {
+    nav_inicio: "Inicio",
+    nav_sobre_mi: "Sobre Mí",
+    nav_obras: "Obras",
+    nav_blog: "Blog",
+    nav_contacto: "Contacto",
+    nav_prensa: "Kit de Prensa",
+    hero_h1_sr: "L. R. Jeffers | Escritor de Romance Paranormal LGBT, Dark Romance y Thriller Romántico",
+    featured_section_title: "Último Estreno",
+    ravens_tagline: "Dark Romance con toques de Techno-Thriller y suspenso",
+    ravens_p1: "OBSESIÓN. VIGILANCIA. VENGANZA. En las montañas Blue Ridge, la verdad se paga con sangre y el amor nace en la oscuridad.",
+    ravens_p2: "Bienvenido a Raven's Ridge, un pueblo donde la niebla oculta secretos antiguos y nadie es quien dice ser. Drake Holloway y Killian Graves descubrirán que algunos lazos son más peligrosos que la muerte misma.",
+    btn_details: "Ver detalles y extracto",
+    btn_buy_bilogia: "Comprar Bilogía en Amazon",
+    transmedia_badge: "🔒 BONUS EXCLUSIVO • EDICIÓN EN FÍSICO",
+    transmedia_title: "Experiencia Transmedia: Archivo Raven's Ridge",
+    transmedia_desc: "Escanea el código QR que encontrarás en el interior de tu ejemplar impreso y desbloquea el <strong>Archivo interactivo Raven's Ridge</strong>. Registra tu progreso de lectura, investiga los secretos de Drake y Killian, desbloquea dossiers clasificados y descubre si eres capaz de identificar al culpable antes del desenlace.",
+    btn_paperback: "📖 Conseguir Ejemplar en Papel en Amazon",
+    obras_title: "Mis Obras",
+    filter_all: "Todas las Obras",
+    filter_dark_thriller: "Dark Romance / Thriller",
+    filter_paranormal: "Paranormal / Cambiaformas",
+    filter_mafia_contemporaneo: "Mafia / Contemporáneo",
+    lazos_title: "Serie Lazos de Sangre",
+    lazos_tagline: "Vínculos inquebrantables en un mundo de sombras",
+    lazos_desc: "¿Qué sucede cuando tu peor enemigo es el lazo que te une a otro? Lazos de Sangre es una saga de romance paranormal LGBT que explora las profundidades del alma de aquellos que caminan entre dos mundos.",
+    titles_in_series: "Títulos de la serie:",
+    btn_buy_amazon: "Comprar en Amazon",
+    autopista_title: "Autopista al infierno",
+    autopista_tagline: "Cuando el orgullo es el peor enemigo",
+    autopista_desc: "Carlos Narváez lo abandonó todo para ir en busca de su sueño. Junto a su mejor amigo, Alejandro, formó una banda de rock y peleó duro hasta convertirla en la mejor de la década.",
+    pakhan_title: "La mujer del Pakhan",
+    pakhan_tagline: "Cuando tu enemigo es tu destino",
+    pakhan_desc: "Rachel Williams es una reconocida periodista que decide infiltrarse en la Solntsevskaya Bratva para obtener su gran historia.",
+    casualidades_title: "Eso que llamamos casualidades",
+    casualidades_tagline: "A veces el destino nos empuja para enseñarnos a nadar",
+    casualidades_desc: "Adrián Ramírez no cree en las casualidades. Con su mundo derrumbándose, rentas atrasadas y un corazón roto, piensa que alguna fuerza superior está en su contra.",
+    ravens_solo_header: "Crónicas de Raven's Ridge - Libros Individuales",
+    sombra_title: "La sombra del cuervo",
+    sombra_tagline: "Libro 1 de Crónicas de Raven's Ridge",
+    sombra_desc: "Drake lo observa desde la oscuridad. Killian siente su mirada. Cuando Killian es acusado de secuestro y asesinato, su única esperanza es una voz distorsionada al teléfono y un hacker que se niega a mostrar su rostro.",
+    sombra_question: "¿Te enamorarías de quien te acecha si es el único que puede salvarte?",
+    misa_title: "Misa de ceniza",
+    misa_tagline: "Libro 2 de Crónicas de Raven's Ridge",
+    misa_desc: "El ritual ha comenzado. La identidad del asesino está más cerca de lo que imaginan.",
+    blog_section_title: "Blog",
+    blog_intro: "Novedades, avances y contenido exclusivo sobre mis libros.",
+    blog_coming_soon: "Más entradas próximamente... 🖤",
+    btn_all_posts: "Ver todos los posts del blog",
+    contact_title: "Contacto",
+    contact_intro: "¿Tienes alguna duda, sugerencia, propuesta o quieres saludar? Escríbeme y te responderé lo antes posible.",
+    label_name: "NOMBRE COMPLETO",
+    label_email: "CORREO ELECTRÓNICO",
+    label_msg: "TU MENSAJE",
+    placeholder_msg: "Escribe aquí tu mensaje...",
+    btn_submit: "ENVIAR MENSAJE",
+    contact_note: "🔒 Tus datos están protegidos. No compartimos tu información con terceros.",
+    upcoming_title: "Próximos Lanzamientos",
+    upcoming_cta_text: "¿Quieres ser el primero en saber cuándo están listos?",
+    btn_join_circle: "Únete al Círculo Oscuro 🖤",
+    newsletter_title: "Únete al Círculo Oscuro 🖤",
+    newsletter_desc: "Recibe avances exclusivos, portadas en primicia y contenido que no publico en redes.",
+    btn_subscribe: "Suscribirme",
+    newsletter_note: "🔒 Sin spam. Puedes darte de baja cuando quieras.",
+    footer_tagline: "Escrito con sangre, tinta y mucha masa madre."
+  },
+  en: {
+    nav_inicio: "Home",
+    nav_sobre_mi: "About Me",
+    nav_obras: "Books",
+    nav_blog: "Blog",
+    nav_contacto: "Contact",
+    nav_prensa: "Press Kit",
+    hero_h1_sr: "L. R. Jeffers | Author of LGBT Paranormal Romance, Dark Romance & Romantic Thrillers",
+    featured_section_title: "Latest Release",
+    ravens_tagline: "Dark Romance with Techno-Thriller and Suspense",
+    ravens_p1: "OBSESSION. SURVEILLANCE. REVENGE. In the Blue Ridge Mountains, the truth is paid in blood, and love is forged in shadows.",
+    ravens_p2: "Welcome to Raven's Ridge, a town where the fog conceals ancient secrets and no one is who they seem. Drake Holloway and Killian Graves will discover that some bonds are deadlier than death itself.",
+    btn_details: "View details & excerpt",
+    btn_buy_bilogia: "Buy Duology on Amazon",
+    transmedia_badge: "🔒 EXCLUSIVE BONUS • PHYSICAL EDITION",
+    transmedia_title: "Transmedia Experience: Raven's Ridge Archive",
+    transmedia_desc: "Scan the QR code found inside your physical copy and unlock the <strong>interactive Raven's Ridge Archive</strong>. Track your reading progress, investigate Drake and Killian's secrets, unlock classified dossiers, and see if you can identify the culprit before the finale.",
+    btn_paperback: "📖 Get Paperback on Amazon",
+    obras_title: "My Books & Series",
+    filter_all: "All Works",
+    filter_dark_thriller: "Dark Romance / Thriller",
+    filter_paranormal: "Paranormal / Shifters",
+    filter_mafia_contemporaneo: "Mafia / Contemporary",
+    lazos_title: "Blood Ties Series",
+    lazos_tagline: "Unbreakable bonds in a world of shadows",
+    lazos_desc: "What happens when your deadliest enemy is the bond that ties you to another? Blood Ties is an LGBT paranormal romance saga exploring the souls of those who walk between two worlds.",
+    titles_in_series: "Titles in the series:",
+    btn_buy_amazon: "Buy on Amazon",
+    autopista_title: "Highway to Hell",
+    autopista_tagline: "When pride is your deadliest foe",
+    autopista_desc: "Carlos Narváez gave up everything to chase his dream. Alongside his best friend Alejandro, he built a rock band and fought tooth and nail to make it the decade's finest.",
+    pakhan_title: "The Pakhan's Woman",
+    pakhan_tagline: "When your enemy is your destiny",
+    pakhan_desc: "Rachel Williams is an acclaimed journalist who infiltrates the Solntsevskaya Bratva to break her biggest story.",
+    casualidades_title: "What We Call Coincidences",
+    casualidades_tagline: "Sometimes destiny pushes us to teach us how to swim",
+    casualidades_desc: "Adrián Ramírez doesn't believe in coincidences. With his world unraveling, rent overdue, and a shattered heart, he thinks a higher power is conspiring against him.",
+    ravens_solo_header: "Raven's Ridge Chronicles - Standalone Novels",
+    sombra_title: "The Shadow of the Raven",
+    sombra_tagline: "Book 1 of Raven's Ridge Chronicles",
+    sombra_desc: "Drake watches from the shadows. Killian feels his gaze. When Killian is framed for kidnapping and murder, his sole lifeline is a distorted voice on the phone and a hacker who refuses to show his face.",
+    sombra_question: "Would you fall for your stalker if he's the only one who can save you?",
+    misa_title: "Ash Mass",
+    misa_tagline: "Book 2 of Raven's Ridge Chronicles",
+    misa_desc: "The ritual has begun. The killer's identity is far closer than anyone imagines.",
+    blog_section_title: "Blog",
+    blog_intro: "News, previews, and exclusive book content.",
+    blog_coming_soon: "More posts coming soon... 🖤",
+    btn_all_posts: "View all blog posts",
+    contact_title: "Contact",
+    contact_intro: "Got a question, suggestion, partnership, or just want to say hi? Drop me a line and I'll get back to you soon.",
+    label_name: "FULL NAME",
+    label_email: "EMAIL ADDRESS",
+    label_msg: "YOUR MESSAGE",
+    placeholder_msg: "Write your message here...",
+    btn_submit: "SEND MESSAGE",
+    contact_note: "🔒 Your data is safe. We never share your details with third parties.",
+    upcoming_title: "Upcoming Releases",
+    upcoming_cta_text: "Want to be the first to know when they drop?",
+    btn_join_circle: "Join the Dark Circle 🖤",
+    newsletter_title: "Join the Dark Circle 🖤",
+    newsletter_desc: "Receive exclusive sneak peeks, early cover reveals, and content I don't share on social media.",
+    btn_subscribe: "Subscribe",
+    newsletter_note: "🔒 Zero spam. Unsubscribe anytime.",
+    footer_tagline: "Written in blood, ink, and sourdough starter."
+  },
+  pt: {
+    nav_inicio: "Início",
+    nav_sobre_mi: "Sobre Mim",
+    nav_obras: "Obras",
+    nav_blog: "Blog",
+    nav_contacto: "Contato",
+    nav_prensa: "Kit de Imprensa",
+    hero_h1_sr: "L. R. Jeffers | Autor de Romance Paranormal LGBT, Dark Romance e Thriller Romântico",
+    featured_section_title: "Último Lançamento",
+    ravens_tagline: "Dark Romance com toques de Techno-Thriller e suspense",
+    ravens_p1: "OBSESSÃO. VIGILÂNCIA. VINGANÇA. Nas montanhas Blue Ridge, a verdade se paga com sangue e o amor nasce na escuridão.",
+    ravens_p2: "Bem-vindo a Raven's Ridge, um vilarejo onde a névoa oculta segredos antigos e ninguém é quem parece ser. Drake Holloway e Killian Graves descobrirão que alguns laços são mais perigosos que a própria morte.",
+    btn_details: "Ver detalhes e trecho",
+    btn_buy_bilogia: "Comprar Duologia na Amazon",
+    transmedia_badge: "🔒 BÔNUS EXCLUSIVO • EDIÇÃO FÍSICA",
+    transmedia_title: "Experiência Transmídia: Arquivo Raven's Ridge",
+    transmedia_desc: "Escaneie o código QR no interior do seu exemplar impresso e desbloqueie o <strong>Arquivo interativo Raven's Ridge</strong>. Registre seu progresso de leitura, investigue os segredos de Drake e Killian, desbloqueie dossiês confidenciais e descubra se é capaz de identificar o culpado antes do desfecho.",
+    btn_paperback: "📖 Garantir Exemplar em Papel na Amazon",
+    obras_title: "Minhas Obras",
+    filter_all: "Todas as Obras",
+    filter_dark_thriller: "Dark Romance / Thriller",
+    filter_paranormal: "Paranormal / Metamorfos",
+    filter_mafia_contemporaneo: "Máfia / Contemporâneo",
+    lazos_title: "Série Laços de Sangue",
+    lazos_tagline: "Vínculos inquebrantáveis em um mundo de sombras",
+    lazos_desc: "O que acontece quando seu pior inimigo é o laço que o une a outro? Laços de Sangre é uma saga de romance paranormal LGBT que explora as profundezas da alma daqueles que caminham entre dois mundos.",
+    titles_in_series: "Títulos de la serie:",
+    btn_buy_amazon: "Comprar na Amazon",
+    autopista_title: "Rodovia para o Inferno",
+    autopista_tagline: "Quando o orgulho é o pior inimigo",
+    autopista_desc: "Carlos Narváez largou tudo em busca de seu sonho. Ao lado de seu melhor amigo, Alejandro, formou uma banda de rock e lutou muito até transformá-la na melhor da década.",
+    pakhan_title: "A Mulher do Pakhan",
+    pakhan_tagline: "Quando seu inimigo é o seu destino",
+    pakhan_desc: "Rachel Williams é uma jornalista de renome que decide se infiltrar na Bratva Solntsevskaya para conseguir sua grande reportagem.",
+    casualidades_title: "O Que Chamamos de Coincidências",
+    casualidades_tagline: "Às vezes o destino nos empurra para nos ensinar a nadar",
+    casualidades_desc: "Adrián Ramírez não acredita em coincidências. Com seu mundo desmoronando, aluguel atrasado e o coração partido, ele pensa que alguma força superior conspira contra ele.",
+    ravens_solo_header: "Crônicas de Raven's Ridge - Livros Individuais",
+    sombra_title: "A Sombra do Corvo",
+    sombra_tagline: "Livro 1 de Crônicas de Raven's Ridge",
+    sombra_desc: "Drake o observa da escuridão. Killian sente seu olhar. Quando Killian é acusado de sequestro e assassinato, sua única esperança é uma voz distorcida ao telefone e um hacker que se recusa a mostrar o rosto.",
+    sombra_question: "Você se apaixonaria por quem o espreita se ele for o único capaz de salvá-lo?",
+    misa_title: "Missa de Cinzas",
+    misa_tagline: "Livro 2 de Crônicas de Raven's Ridge",
+    misa_desc: "O ritual começou. A identidade do assassino está mais perto do que imaginam.",
+    blog_section_title: "Blog",
+    blog_intro: "Novidades, prévias e conteúdo exclusivo sobre meus livros.",
+    blog_coming_soon: "Mais postagens em breve... 🖤",
+    btn_all_posts: "Ver todas as postagens do blog",
+    contact_title: "Contato",
+    contact_intro: "Tem alguma dúvida, sugestão, proposta ou quer mandar um oi? Escreva para mim e responderei o quanto antes.",
+    label_name: "NOME COMPLETO",
+    label_email: "E-MAIL",
+    label_msg: "SUA MENSAGEM",
+    placeholder_msg: "Escreva sua mensagem aqui...",
+    btn_submit: "ENVIAR MENSAGEM",
+    contact_note: "🔒 Seus dados estão protegidos. Não compartilhamos suas informações com terceiros.",
+    upcoming_title: "Próximos Lançamentos",
+    upcoming_cta_text: "Quer ser o primeiro a saber quando estiverem prontos?",
+    btn_join_circle: "Junte-se ao Círculo Sombrio 🖤",
+    newsletter_title: "Junte-se ao Círculo Sombrio 🖤",
+    newsletter_desc: "Receba prévias exclusivas, revelações de capas em primeira mão e conteúdo que não publico nas redes.",
+    btn_subscribe: "Inscrever-se",
+    newsletter_note: "🔒 Sem spam. Cancele sua inscrição quando quiser.",
+    footer_tagline: "Escrito com sangue, tinta e fermento natural."
+  }
+};
+
+function cambiarIdiomaSitio(lang) {
+  const dict = I18N_WEB[lang] || I18N_WEB.es;
+  localStorage.setItem('lrj_web_lang', lang);
+
+  // Actualizar botones de idioma activos
+  document.querySelectorAll('.lang-nav-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+  });
+
+  // Traducir elementos de texto
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key]) {
+      el.innerHTML = dict[key];
+    }
+  });
+
+  // Traducir placeholders
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (dict[key]) {
+      el.placeholder = dict[key];
+    }
+  });
+
+  // Actualizar lang del documento
+  const langCodes = { es: 'es-MX', en: 'en-US', pt: 'pt-BR' };
+  document.documentElement.lang = langCodes[lang] || 'es-MX';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const idiomaGuardado = localStorage.getItem('lrj_web_lang') || 'es';
+  if (idiomaGuardado !== 'es') {
+    cambiarIdiomaSitio(idiomaGuardado);
+  }
+});

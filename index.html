@@ -50,7 +50,6 @@
       "https://www.facebook.com/LRJeffers1",
       "https://www.instagram.com/lrjeffers90",
       "https://www.tiktok.com/@lrj_90t",
-      "https://www.patreon.com/c/LRJeffers90",
       "https://www.goodreads.com/lrjeffers90"
     ]
   }
@@ -62,56 +61,54 @@
   <!-- BANNER PRINCIPAL -->
   <header class="hero-banner">
     <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="hero-title">L. R. Jeffers</h1>
-      <p class="hero-subtitle">Autor de Dark Romance, Romance Paranormal &amp; Literatura LGBT+</p>
-    </div>
+    <h1 class="sr-only" data-i18n="hero_h1_sr">L. R. Jeffers | Escritor de Romance Paranormal LGBT, Dark Romance y Thriller Romántico</h1>
   </header>
 
   <!-- NAVEGACIÓN -->
   <nav aria-label="Navegación principal" class="main-nav">
     <button id="menu-toggle" aria-expanded="false" aria-controls="menu-list">☰ Menú</button>
     <ul id="menu-list">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="sobre-mi.html">Sobre Mí</a></li>
-      <li><a href="#obras">Obras</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-      <li><a href="prensa.html">Kit de Prensa</a></li>
+      <li><a href="#inicio" data-i18n="nav_inicio">Inicio</a></li>
+      <li><a href="sobre-mi.html" data-i18n="nav_sobre_mi">Sobre Mí</a></li>
+      <li><a href="#obras" data-i18n="nav_obras">Obras</a></li>
+      <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
+      <li><a href="#contacto" data-i18n="nav_contacto">Contacto</a></li>
+      <li><a href="prensa.html" data-i18n="nav_prensa">Kit de Prensa</a></li>
+      <li class="lang-selector-nav">
+        <button type="button" class="lang-nav-btn active" data-lang="es" onclick="cambiarIdiomaSitio('es')">ES</button>
+        <button type="button" class="lang-nav-btn" data-lang="en" onclick="cambiarIdiomaSitio('en')">EN</button>
+        <button type="button" class="lang-nav-btn" data-lang="pt" onclick="cambiarIdiomaSitio('pt')">PT</button>
+      </li>
     </ul>
   </nav>
 
   <main id="main">
     <!-- ÚLTIMO ESTRENO -->
     <section id="inicio" class="featured-section">
-      <h2>Último Estreno</h2>
+      <h2 data-i18n="featured_section_title">Último Estreno</h2>
       
       <div class="featured-book-layout">
         <div class="book-info">
           <h3>Crónicas de Raven's Ridge</h3>
-          <p class="book-tagline">Dark Romance con toques de Techno-Thriller y suspenso</p>
-          <p>
-            OBSESIÓN. VIGILANCIA. VENGANZA. En las montañas Blue Ridge, la verdad se paga con sangre y el amor nace en la oscuridad.
-          </p>
-          <p>
-            Bienvenido a Raven's Ridge, un pueblo donde la niebla oculta secretos antiguos y nadie es quien dice ser. Drake Holloway y Killian Graves descubrirán que algunos lazos son más peligrosos que la muerte misma.
-          </p>
+          <p class="book-tagline" data-i18n="ravens_tagline">Dark Romance con toques de Techno-Thriller y suspenso</p>
+          <p data-i18n="ravens_p1">OBSESIÓN. VIGILANCIA. VENGANZA. En las montañas Blue Ridge, la verdad se paga con sangre y el amor nace en la oscuridad.</p>
+          <p data-i18n="ravens_p2">Bienvenido a Raven's Ridge, un pueblo donde la niebla oculta secretos antiguos y nadie es quien dice ser. Drake Holloway y Killian Graves descubrirán que algunos lazos son más peligrosos que la muerte misma.</p>
           <div class="book-meta">
             <span class="genre-tag">Dark Romance</span>
             <span class="genre-tag">Techno-Thriller</span>
             <span class="genre-tag">M/M</span>
           </div>
           <div class="book-actions">
-            <a href="ravens-ridge-01-la-sombra-del-cuervo.html" class="btn">Ver detalles y extracto</a>
-            <a href="https://www.amazon.com/dp/B0GX2ZVXMQ" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Comprar Bilogía en Amazon</a>
+            <a href="ravens-ridge-01-la-sombra-del-cuervo.html" class="btn" data-i18n="btn_details">Ver detalles y extracto</a>
+            <a href="https://www.amazon.com/dp/B0GX2ZVXMQ" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n="btn_buy_bilogia">Comprar Bilogía en Amazon</a>
           </div>
 
           <!-- EXPERIENCIA TRANSMEDIA: ARCHIVO RAVEN'S RIDGE -->
           <div class="transmedia-callout">
-            <div class="transmedia-badge">🔒 BONUS EXCLUSIVO • EDICIÓN EN FÍSICO</div>
-            <h4>Experiencia Transmedia: Archivo Raven's Ridge</h4>
-            <p>Escanea el código QR que encontrarás en el interior de tu ejemplar impreso y desbloquea el <strong>Archivo interactivo Raven's Ridge</strong>. Registra tu progreso de lectura, investiga los secretos de Drake y Killian, desbloquea dossiers clasificados y descubre si eres capaz de identificar al culpable antes del desenlace.</p>
-            <a href="https://www.amazon.com/dp/B0GX2ZVXMQ" target="_blank" rel="noopener noreferrer" class="btn-transmedia">📖 Conseguir Ejemplar en Papel en Amazon</a>
+            <div class="transmedia-badge" data-i18n="transmedia_badge">🔒 BONUS EXCLUSIVO • EDICIÓN EN FÍSICO</div>
+            <h4 data-i18n="transmedia_title">Experiencia Transmedia: Archivo Raven's Ridge</h4>
+            <p data-i18n="transmedia_desc">Escanea el código QR que encontrarás en el interior de tu ejemplar impreso y desbloquea el <strong>Archivo interactivo Raven's Ridge</strong>. Registra tu progreso de lectura, investiga los secretos de Drake y Killian, desbloquea dossiers clasificados y descubre si eres capaz de identificar al culpable antes del desenlace.</p>
+            <a href="https://www.amazon.com/dp/B0GX2ZVXMQ" target="_blank" rel="noopener noreferrer" class="btn-transmedia" data-i18n="btn_paperback">📖 Conseguir Ejemplar en Papel en Amazon</a>
           </div>
         </div>
         
@@ -125,14 +122,14 @@
 
     <!-- MIS OBRAS -->
     <section id="obras">
-      <h2>Mis Obras</h2>
+      <h2 data-i18n="obras_title">Mis Obras</h2>
 
       <!-- FILTROS DE OBRAS -->
       <div class="obras-filter-bar">
-        <button type="button" class="filter-btn active" data-filter="all">Todas las Obras</button>
-        <button type="button" class="filter-btn" data-filter="dark-thriller">Dark Romance / Thriller</button>
-        <button type="button" class="filter-btn" data-filter="paranormal">Paranormal / Cambiaformas</button>
-        <button type="button" class="filter-btn" data-filter="mafia-contemporaneo">Mafia / Contemporáneo</button>
+        <button type="button" class="filter-btn active" data-filter="all" data-i18n="filter_all">Todas las Obras</button>
+        <button type="button" class="filter-btn" data-filter="dark-thriller" data-i18n="filter_dark_thriller">Dark Romance / Thriller</button>
+        <button type="button" class="filter-btn" data-filter="paranormal" data-i18n="filter_paranormal">Paranormal / Cambiaformas</button>
+        <button type="button" class="filter-btn" data-filter="mafia-contemporaneo" data-i18n="filter_mafia_contemporaneo">Mafia / Contemporáneo</button>
       </div>
 
       <div class="obras-grid">
@@ -145,13 +142,11 @@
             </div>
           </a>
           <div class="obra-content">
-            <h3>Serie Lazos de Sangre</h3>
-            <p class="obra-tagline">Vínculos inquebrantables en un mundo de sombras</p>
-            <p>
-              ¿Qué sucede cuando tu peor enemigo es el lazo que te une a otro? Lazos de Sangre es una saga de romance paranormal LGBT que explora las profundidades del alma de aquellos que caminan entre dos mundos.
-            </p>
+            <h3 data-i18n="lazos_title">Serie Lazos de Sangre</h3>
+            <p class="obra-tagline" data-i18n="lazos_tagline">Vínculos inquebrantables en un mundo de sombras</p>
+            <p data-i18n="lazos_desc">¿Qué sucede cuando tu peor enemigo es el lazo que te une a otro? Lazos de Sangre es una saga de romance paranormal LGBT que explora las profundidades del alma de aquellos que caminan entre dos mundos.</p>
             <div class="serie-libros">
-              <h4>Títulos de la serie:</h4>
+              <h4 data-i18n="titles_in_series">Títulos de la serie:</h4>
               <ul>
                 <li><a href="lazos-01-luz-de-luna-carmesi.html">Luz de luna carmesí</a></li>
                 <li><a href="lazos-02-el-lobo-maldito.html">El lobo maldito</a></li>
@@ -167,8 +162,8 @@
               <span class="genre-tag">LGBT</span>
             </div>
             <div class="book-actions">
-              <a href="lazos-01-luz-de-luna-carmesi.html" class="btn">Ver detalles y extracto</a>
-              <a href="https://www.amazon.com/dp/B08MT8CVVT" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Comprar en Amazon</a>
+              <a href="lazos-01-luz-de-luna-carmesi.html" class="btn" data-i18n="btn_details">Ver detalles y extracto</a>
+              <a href="https://www.amazon.com/dp/B08MT8CVVT" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n="btn_buy_amazon">Comprar en Amazon</a>
             </div>
           </div>
         </div>
@@ -181,19 +176,17 @@
             </div>
           </a>
           <div class="obra-content">
-            <h3>Autopista al infierno</h3>
-            <p class="obra-tagline">Cuando el orgullo es el peor enemigo</p>
-            <p>
-              Carlos Narváez lo abandonó todo para ir en busca de su sueño. Junto a su mejor amigo, Alejandro, formó una banda de rock y peleó duro hasta convertirla en la mejor de la década.
-            </p>
+            <h3 data-i18n="autopista_title">Autopista al infierno</h3>
+            <p class="obra-tagline" data-i18n="autopista_tagline">Cuando el orgullo es el peor enemigo</p>
+            <p data-i18n="autopista_desc">Carlos Narváez lo abandonó todo para ir en busca de su sueño. Junto a su mejor amigo, Alejandro, formó una banda de rock y peleó duro hasta convertirla en la mejor de la década.</p>
             <div class="book-meta">
               <span class="genre-tag">Contemporáneo</span>
               <span class="genre-tag">Drama</span>
               <span class="genre-tag">M/M</span>
             </div>
             <div class="book-actions">
-              <a href="amor-01-autopista-al-infierno.html" class="btn">Ver detalles y extracto</a>
-              <a href="https://www.amazon.com/dp/B093TJ83NC" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Comprar en Amazon</a>
+              <a href="amor-01-autopista-al-infierno.html" class="btn" data-i18n="btn_details">Ver detalles y extracto</a>
+              <a href="https://www.amazon.com/dp/B093TJ83NC" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n="btn_buy_amazon">Comprar en Amazon</a>
             </div>
           </div>
         </div>
@@ -206,19 +199,17 @@
             </div>
           </a>
           <div class="obra-content">
-            <h3>La mujer del Pakhan</h3>
-            <p class="obra-tagline">Cuando tu enemigo es tu destino</p>
-            <p>
-              Rachel Williams es una reconocida periodista que decide infiltrarse en la Solntsevskaya Bratva para obtener su gran historia.
-            </p>
+            <h3 data-i18n="pakhan_title">La mujer del Pakhan</h3>
+            <p class="obra-tagline" data-i18n="pakhan_tagline">Cuando tu enemigo es tu destino</p>
+            <p data-i18n="pakhan_desc">Rachel Williams es una reconocida periodista que decide infiltrarse en la Solntsevskaya Bratva para obtener su gran historia.</p>
             <div class="book-meta">
               <span class="genre-tag">Mafia</span>
               <span class="genre-tag">Suspense</span>
               <span class="genre-tag">M/F</span>
             </div>
             <div class="book-actions">
-              <a href="pakhan-01-la-mujer-del-pakhan.html" class="btn">Ver detalles y extracto</a>
-              <a href="https://www.amazon.com/dp/B0CKBXH5GK" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Comprar en Amazon</a>
+              <a href="pakhan-01-la-mujer-del-pakhan.html" class="btn" data-i18n="btn_details">Ver detalles y extracto</a>
+              <a href="https://www.amazon.com/dp/B0CKBXH5GK" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n="btn_buy_amazon">Comprar en Amazon</a>
             </div>
           </div>
         </div>
@@ -231,19 +222,17 @@
             </div>
           </a>
           <div class="obra-content">
-            <h3>Eso que llamamos casualidades</h3>
-            <p class="obra-tagline">A veces el destino nos empuja para enseñarnos a nadar</p>
-            <p>
-              Adrián Ramírez no cree en las casualidades. Con su mundo derrumbándose, rentas atrasadas y un corazón roto, piensa que alguna fuerza superior está en su contra.
-            </p>
+            <h3 data-i18n="casualidades_title">Eso que llamamos casualidades</h3>
+            <p class="obra-tagline" data-i18n="casualidades_tagline">A veces el destino nos empuja para enseñarnos a nadar</p>
+            <p data-i18n="casualidades_desc">Adrián Ramírez no cree en las casualidades. Con su mundo derrumbándose, rentas atrasadas y un corazón roto, piensa que alguna fuerza superior está en su contra.</p>
             <div class="book-meta">
               <span class="genre-tag">Contemporáneo</span>
               <span class="genre-tag">Drama Familiar</span>
               <span class="genre-tag">Romance</span>
             </div>
             <div class="book-actions">
-              <a href="eso-que-llamamos-casualidades.html" class="btn">Ver detalles y extracto</a>
-              <a href="https://www.amazon.com/dp/B07KN1MPY6" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Comprar en Amazon</a>
+              <a href="eso-que-llamamos-casualidades.html" class="btn" data-i18n="btn_details">Ver detalles y extracto</a>
+              <a href="https://www.amazon.com/dp/B07KN1MPY6" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n="btn_buy_amazon">Comprar en Amazon</a>
             </div>
           </div>
         </div>
@@ -251,7 +240,7 @@
       </div>
 
       <!-- RAVEN'S RIDGE -->
-      <h3 class="obras-section-header" data-category="dark-thriller" style="margin-top: 4rem; margin-bottom: 2rem; text-align: center;">Crónicas de Raven's Ridge - Libros Individuales</h3>
+      <h3 class="obras-section-header" data-category="dark-thriller" style="margin-top: 4rem; margin-bottom: 2rem; text-align: center;" data-i18n="ravens_solo_header">Crónicas de Raven's Ridge - Libros Individuales</h3>
       
       <div class="obras-grid">
         
@@ -263,20 +252,18 @@
             </div>
           </a>
           <div class="obra-content">
-            <h3>La sombra del cuervo</h3>
-            <p class="obra-tagline">Libro 1 de Crónicas de Raven's Ridge</p>
-            <p>
-              Drake lo observa desde la oscuridad. Killian siente su mirada. Cuando Killian es acusado de secuestro y asesinato, su única esperanza es una voz distorsionada al teléfono y un hacker que se niega a mostrar su rostro.
-            </p>
-            <p class="question-highlight">¿Te enamorarías de quien te acecha si es el único que puede salvarte?</p>
+            <h3 data-i18n="sombra_title">La sombra del cuervo</h3>
+            <p class="obra-tagline" data-i18n="sombra_tagline">Libro 1 de Crónicas de Raven's Ridge</p>
+            <p data-i18n="sombra_desc">Drake lo observa desde la oscuridad. Killian siente su mirada. Cuando Killian es acusado de secuestro y asesinato, su única esperanza es una voz distorsionada al teléfono y un hacker que se niega a mostrar su rostro.</p>
+            <p class="question-highlight" data-i18n="sombra_question">¿Te enamorarías de quien te acecha si es el único que puede salvarte?</p>
             <div class="book-meta">
               <span class="genre-tag">Dark Romance</span>
               <span class="genre-tag">Techno-Thriller</span>
               <span class="genre-tag">M/M</span>
             </div>
             <div class="book-actions">
-              <a href="ravens-ridge-01-la-sombra-del-cuervo.html" class="btn">Ver detalles y extracto</a>
-              <a href="https://www.amazon.com/dp/B0GX7GC1M5" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Comprar en Amazon</a>
+              <a href="ravens-ridge-01-la-sombra-del-cuervo.html" class="btn" data-i18n="btn_details">Ver detalles y extracto</a>
+              <a href="https://www.amazon.com/dp/B0GX7GC1M5" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n="btn_buy_amazon">Comprar en Amazon</a>
             </div>
           </div>
         </div>
@@ -289,19 +276,17 @@
             </div>
           </a>
           <div class="obra-content">
-            <h3>Misa de ceniza</h3>
-            <p class="obra-tagline">Libro 2 de Crónicas de Raven's Ridge</p>
-            <p>
-              El ritual ha comenzado. La identidad del asesino está más cerca de lo que imaginan.
-            </p>
+            <h3 data-i18n="misa_title">Misa de ceniza</h3>
+            <p class="obra-tagline" data-i18n="misa_tagline">Libro 2 de Crónicas de Raven's Ridge</p>
+            <p data-i18n="misa_desc">El ritual ha comenzado. La identidad del asesino está más cerca de lo que imaginan.</p>
             <div class="book-meta">
               <span class="genre-tag">Dark Romance</span>
               <span class="genre-tag">Techno-Thriller</span>
               <span class="genre-tag">M/M</span>
             </div>
             <div class="book-actions">
-              <a href="ravens-ridge-02-misa-de-ceniza.html" class="btn">Ver detalles y extracto</a>
-              <a href="https://www.amazon.com/dp/B0GX32TZWP" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Comprar en Amazon</a>
+              <a href="ravens-ridge-02-misa-de-ceniza.html" class="btn" data-i18n="btn_details">Ver detalles y extracto</a>
+              <a href="https://www.amazon.com/dp/B0GX32TZWP" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n="btn_buy_amazon">Comprar en Amazon</a>
             </div>
           </div>
         </div>
@@ -311,8 +296,8 @@
 
     <!-- BLOG -->
     <section id="blog" class="blog-section">
-      <h2>Blog</h2>
-      <p class="section-intro">Novedades, avances y contenido exclusivo sobre mis libros.</p>
+      <h2 data-i18n="blog_section_title">Blog</h2>
+      <p class="section-intro" data-i18n="blog_intro">Novedades, avances y contenido exclusivo sobre mis libros.</p>
       
       <div class="posts-list">
         <!-- NUEVO POST: TRADUCCIÓN AL INGLÉS -->
@@ -368,21 +353,18 @@
       </div>
       
       <div class="blog-coming-soon">
-        <p><em>Más entradas próximamente... 🖤</em></p>
+        <p><em data-i18n="blog_coming_soon">Más entradas próximamente... 🖤</em></p>
       </div>
       
       <div style="text-align: center; margin-top: 2rem;">
-        <a href="blog.html" class="btn btn-primary">Ver todos los posts del blog</a>
+        <a href="blog.html" class="btn btn-primary" data-i18n="btn_all_posts">Ver todos los posts del blog</a>
       </div>
     </section>
 
     <!-- CONTACTO -->
     <section id="contacto">
-      <h2>Contacto</h2>
-      <p class="contact-intro">
-        ¿Tienes alguna duda, sugerencia, propuesta o quieres saludar? 
-        Escríbeme y te responderé lo antes posible.
-      </p>
+      <h2 data-i18n="contact_title">Contacto</h2>
+      <p class="contact-intro" data-i18n="contact_intro">¿Tienes alguna duda, sugerencia, propuesta o quieres saludar? Escríbeme y te responderé lo antes posible.</p>
       
       <div class="contact-form-wrapper">
         <form id="contact-form" action="https://formspree.io/f/xaqaaypo" method="POST">
@@ -391,29 +373,27 @@
           <input type="hidden" name="_autoresponse" value="Gracias por escribirme. He recibido tu mensaje y te responderé a la brevedad. — L. R. Jeffers">
           
           <div class="form-group">
-            <label for="nombre">NOMBRE COMPLETO</label>
+            <label for="nombre" data-i18n="label_name">NOMBRE COMPLETO</label>
             <input type="text" id="nombre" name="nombre" placeholder="Ej. Ramón López" required>
           </div>
           <div class="form-group">
-            <label for="email">CORREO ELECTRÓNICO</label>
+            <label for="email" data-i18n="label_email">CORREO ELECTRÓNICO</label>
             <input type="email" id="email" name="email" placeholder="tu@email.com" required>
           </div>
           <div class="form-group">
-            <label for="mensaje">TU MENSAJE</label>
-            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí tu mensaje..." required></textarea>
+            <label for="mensaje" data-i18n="label_msg">TU MENSAJE</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí tu mensaje..." required data-i18n-placeholder="placeholder_msg"></textarea>
           </div>
-          <button type="submit" class="btn-submit">ENVIAR MENSAJE</button>
+          <button type="submit" class="btn-submit" data-i18n="btn_submit">ENVIAR MENSAJE</button>
         </form>
       </div>
-      <p class="form-note">
-        🔒 Tus datos están protegidos. No compartimos tu información con terceros.
-      </p>
+      <p class="form-note" data-i18n="contact_note">🔒 Tus datos están protegidos. No compartimos tu información con terceros.</p>
     </section>
 
     <!-- PRÓXIMOS LANZAMIENTOS -->
     <section id="proximos" class="coming-soon-section">
       <div class="coming-soon-container">
-        <h2>Próximos Lanzamientos</h2>
+        <h2 data-i18n="upcoming_title">Próximos Lanzamientos</h2>
         
         <div class="coming-soon-grid">
           
@@ -459,8 +439,8 @@
         </div>
         
         <div class="coming-soon-cta">
-          <p>¿Quieres ser el primero en saber cuándo están listos?</p>
-          <a href="#newsletter" class="btn btn-primary">Únete al Círculo Oscuro 🖤</a>
+          <p data-i18n="upcoming_cta_text">¿Quieres ser el primero en saber cuándo están listos?</p>
+          <a href="#newsletter" class="btn btn-primary" data-i18n="btn_join_circle">Únete al Círculo Oscuro 🖤</a>
         </div>
         
       </div>
@@ -469,18 +449,18 @@
     <!-- NEWSLETTER -->
     <section id="newsletter" class="newsletter-section">
       <div class="newsletter-container">
-        <h2>Únete al Círculo Oscuro 🖤</h2>
-        <p>Recibe avances exclusivos, portadas en primicia y contenido que no publico en redes.</p>
+        <h2 data-i18n="newsletter_title">Únete al Círculo Oscuro 🖤</h2>
+        <p data-i18n="newsletter_desc">Recibe avances exclusivos, portadas en primicia y contenido que no publico en redes.</p>
         <form action="https://formspree.io/f/xaqaaypo" method="POST" class="newsletter-form">
           <!-- Campos ocultos para Formspree -->
           <input type="hidden" name="_subject" value="🖤 Nueva suscripción al Círculo Oscuro - Newsletter">
           <input type="hidden" name="_autoresponse" value="¡Bienvenido al Círculo Oscuro! 🖤 Pronto recibirás contenido exclusivo en tu bandeja de entrada. — L. R. Jeffers">
           
           <input type="email" name="email" placeholder="tu@email.com" required aria-label="Tu correo electrónico">
-          <button type="submit" class="btn btn-primary">Suscribirme</button>
+          <button type="submit" class="btn btn-primary" data-i18n="btn_subscribe">Suscribirme</button>
         </form>
         <p class="newsletter-note">
-          <small>🔒 Sin spam. Puedes darte de baja cuando quieras.</small>
+          <small data-i18n="newsletter_note">🔒 Sin spam. Puedes darte de baja cuando quieras.</small>
         </p>
       </div>
     </section>
@@ -497,13 +477,10 @@
         <a href="https://www.instagram.com/lrjeffers90" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-instagram"></i> Instagram
         </a>
-        <a href="https://www.patreon.com/c/LRJeffers90" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-patreon"></i> Patreon
-        </a>
         <a href="https://www.tiktok.com/@lrj_90t" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-tiktok"></i> TikTok
         </a>
-        <a href="https://whatsapp.com/channel/0029Vb7kOJt9Bb5wiQfIgn0q" target="_blank" rel="noopener noreferrer">
+        <a href="https://chat.whatsapp.com/DdAUhZ9O4uX65Vm1rM3SXi" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-whatsapp"></i> WhatsApp
         </a>
         <a href="https://m.me/cm/Abb1kFnRjAaxFDW0/" target="_blank" rel="noopener noreferrer">
@@ -514,7 +491,7 @@
         </a>
       </div>
       <p>&copy; 2026 L. R. Jeffers. Todos los derechos reservados. | <a href="privacidad.html" style="color: #6b1c23; text-decoration: none;">Política de Privacidad</a></p>
-      <p class="footer-tagline">Escrito con sangre, tinta y mucha masa madre.</p>
+      <p class="footer-tagline" data-i18n="footer_tagline">Escrito con sangre, tinta y mucha masa madre.</p>
     </div>
   </footer>
 
