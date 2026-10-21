@@ -125,3 +125,39 @@ function showSuccess() {
     setTimeout(() => el.classList.remove('show'), 3000);
   }
 }
+
+/* ==================== FILTRO INTERACTIVO DE OBRAS ==================== */
+document.addEventListener('DOMContentLoaded', () => {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.obras-grid .obra-card');
+  const sectionHeaders = document.querySelectorAll('.obras-section-header');
+
+  if (filterBtns.length > 0 && cards.length > 0) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        cards.forEach(card => {
+          const category = card.getAttribute('data-category') || '';
+          if (filter === 'all' || category === filter || category.includes(filter)) {
+            card.classList.remove('filter-hidden');
+          } else {
+            card.classList.add('filter-hidden');
+          }
+        });
+
+        sectionHeaders.forEach(header => {
+          const cat = header.getAttribute('data-category') || '';
+          if (filter === 'all' || cat === filter || cat.includes(filter)) {
+            header.style.display = 'block';
+          } else {
+            header.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+});

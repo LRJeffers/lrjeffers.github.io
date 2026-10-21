@@ -33,13 +33,35 @@
     <priority>0.8</priority>
   </url>
   
+  <url>
+    <loc>https://lrjeffers.github.io/blog/misa-de-ceniza-ya-disponible.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://lrjeffers.github.io/blog/cronicas-ravens-ridge-english-available.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://lrjeffers.github.io/privacidad.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  
   <!-- Kit de Prensa -->
   <url>
     <loc>https://lrjeffers.github.io/prensa.html</loc>
     <lastmod>2026-04-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
-  </ul>
+  </url>
   
   <!-- Páginas de libros - Lazos de Sangre -->
   <url>
